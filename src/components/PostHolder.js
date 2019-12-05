@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Posts from './Posts';
 import {connect} from 'react-redux';
 import {fetchPosts} from '../actions/postActions';
-import {store} from '../store';
 
 class PostHolder extends Component {
   state = {
@@ -15,6 +14,7 @@ class PostHolder extends Component {
 
   dostuff = () => {
     console.log('stuff')
+    this.props.fetchPosts()
 
   }
   render () {
